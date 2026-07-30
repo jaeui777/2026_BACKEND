@@ -109,9 +109,9 @@ System.out.print("게시물 번호: " ); int 번호 = scan.nextInt();
 scan.nextLine(); // nextInt() 3입력후 엔터(\n) 치면 3반환되고 엔터(\n) 유지 된다. \n 초기화
 System.out.print("게시물 제목: " ); String 제목 = scan.nextLine();
 System.out.print("게시물 내용: " ); String 내용 = scan.nextLine();
-System.out.printf("[%d 게시물] \n, 번호");
+System.out.printf("[%d 게시물] \n", 번호);
 System.out.printf("제목 : %s \n", 제목);
-System.out.printf("제목 : %s \n", 제목);
+System.out.printf("내용 : %s \n", 내용);
 
 
 
@@ -144,7 +144,6 @@ System.out.println("입력하신 성별은 %s 입니다. \n , 성별");
 키: 165.8cm
 프로그래머 여부: true
 */
-
 
 
         System.out.print("이름: ");

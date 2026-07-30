@@ -145,33 +145,25 @@ System.out.println("입력하신 성별은 %s 입니다. \n , 성별");
 프로그래머 여부: true
 */
 
-String name2 = "김자바";
-int age2 = 25;
-double height2 = 165.8;
-boolean programmer2 = true;
 
-
-
-
-  Scanner scan2 = new Scanner(System.in);
 
         System.out.print("이름: ");
         String name2 = scan.nextLine();
 
         System.out.print("나이: ");
-        int age2 = scan.nextInt();
+        int age3 = scan.nextInt();
 
         System.out.print("키: ");
         double height2 = scan.nextDouble();
 
         System.out.print("프로그래머입니까? (true/false): ");
-        boolean programmer = scan.nextBoolean();
+        boolean programmer2 = scan.nextBoolean();
 
         System.out.println("--- 자기소개 ---");
-        System.out.println("이름: " + name);
-        System.out.println("나이: " + age);
-        System.out.println("키: " + height + "cm");
-        System.out.println("프로그래머 여부: " + programmer);
+        System.out.println("이름: " + name2);
+        System.out.println("나이: " + age3);
+        System.out.println("키: " + height2 + "cm");
+        System.out.println("프로그래머 여부: " + programmer2);
 
     }
 

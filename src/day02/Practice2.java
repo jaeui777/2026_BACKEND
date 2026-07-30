@@ -36,7 +36,7 @@ public class Practice2 {
         /*문제 4*/
 
         System.out.print("1] 정수: ");
-        int 정수1 = scan.nextInt();1
+        int 정수1 = scan.nextInt();
         
 
         System.out.print("2] 정수: ");
@@ -47,6 +47,5 @@ public class Practice2 {
 
         double average = (정수1 + 정수2 + 정수3) / 3;
         System.out.println("평균 결과: " + average);
-        scan.close();
     }
 }

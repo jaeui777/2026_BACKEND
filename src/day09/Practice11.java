@@ -94,7 +94,6 @@ System.out.println(Study);
  } //main end
 } // class end
 
-
      class Book{
   private String title;
   private String author; 

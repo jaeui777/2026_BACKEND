@@ -1,3 +1,6 @@
+package day07;
+
+
 public class Practice1 {
     public static void main(String[] args) {
         /*[문제 1] Printer 클래스를 만드세요.

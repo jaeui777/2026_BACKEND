@@ -1,5 +1,7 @@
 package day05;
 
+import java.util.Scanner;
+
 public class Practice7 {
     public static void main(String[] args) {
         // [1] 1.객체 생성, new 생성자명();  또는  타입 변수명 = new 생성자명();
@@ -49,6 +51,7 @@ public class Practice7 {
         System.out.println( m1.isLogin );           // 4) 멤버변수 값 호출 
         m1.isLogin = true;
         System.out.println( m1.isLogin );
+        
         // [7] 타입(자료형) 이란 : 자료의 구분
         // 자료란? 데이터들 , 리터럴/상수 ( 3 , 3.14 , 'A' , true )
         // 기본타입8가지 vs 참조타입(배열,객체) , 즉] 배열과 객체도 (1개)자료 이다. 
@@ -56,8 +59,57 @@ public class Practice7 {
         t1.channel = 11;    t1.volume -= 2;
         System.out.println( t1.channel );   System.out.println( t1.volume );
         
-    }
-}
+        // [8]
+        Player player1 = new Player();
+        player1.name = "손흥민"; 
+        player1.power = 90; 
+        player1.speed = 95;
+
+        Player player2 = new Player();
+        player2.name = "이강인"; 
+        player2.power = 85; 
+        player2.speed = 92;
+
+        int 합1 = player1.power + player1.speed;
+        int 합2 = player2.power + player2.speed;
+        if (합1 > 합2) {System.out.println(player1.name);} 
+        else {System.out.println(player2.name);} 
+
+        // [9]
+        MenuItem menu1 = new MenuItem();
+        menu1.name = "김치찌개"; menu1.price = 8000; menu1.isSignature = true;
+
+        MenuItem menu2 = new MenuItem();
+        menu2.name = "된장찌개"; menu2.price = 8000; menu2.isSignature = false;
+
+        MenuItem menu3 = new MenuItem();
+        menu3.name = "계란찜"; menu3.price = 3000; menu3.isSignature = false;
+
+        if (menu1.isSignature == true) {System.out.println("[대표메뉴] " + menu1.name + " : " + menu1.price + "원");}
+        if (menu2.isSignature == true) {System.out.println("[대표메뉴] " + menu2.name + " : " + menu2.price + "원");}
+        if (menu3.isSignature == true) {System.out.println("[대표메뉴] " + menu3.name + " : " + menu3.price + "원");}
+        // [10]
+        Scanner scan = new Scanner(System.in);
+
+        UserProfile 사용자 = new UserProfile();
+
+        System.out.print("이름: ");
+        사용자.name = scan.next();
+
+        System.out.print("나이: ");
+        사용자.age = scan.nextInt();
+
+        System.out.print("MBTI: ");
+        사용자.mbti = scan.next();
+
+        System.out.println("--- 프로필 ---");
+        System.out.println("이름: " + 사용자.name);
+        System.out.println("나이: " + 사용자.age);
+        System.out.println("MBTI: " + 사용자.mbti);
+
+
+    } //main end
+} //class end
 
 class Television{ int channel=7; int volume=20; } //  channel은 7, volume은 20 초기값 
 class Member{ // 1) 클래스 생성
@@ -97,14 +149,29 @@ class Product{
     int price;
 }
 
-/*[문제 8] Player 클래스를 만드세요. name(문자열), power(정수), speed(정수) 멤버 변수를 가집니다.
-1. main 함수에서 Player 객체 2개를 생성하세요.
-2. 첫 번째 객체에는 "손흥민", 90, 95를, 두 번째 객체에는 "이강인", 85, 92를 각각 저장하세요.
-3. 두 객체의 power와 speed의 합을 각각 계산하고, 합이 더 높은 선수의 이름을 출력하세요.*/
+// [8]
+class Player {
+    String name;
+    int power;
+    int speed;
+}
 
-/*[문제 9] MenuItem 클래스를 만드세요. name(문자열), price(정수), isSignature(boolean, 대표메뉴 여부) 멤버 변수를 가집니다.
-1. main 함수에서 MenuItem 객체 3개를 생성하고, 첫 번째는 "김치찌개", 8000, true, 두 번째는 "된장찌개", 8000, false, 세 번째는 "계란찜", 3000, false로 저장하세요.
-2. if문을 사용하여 isSignature가 true인 메뉴 객체를 찾아, "[대표메뉴] [메뉴이름] : [가격]원" 형식으로 출력하세요.*/
+// [9]
+class MenuItem {
+    String name;
+    int price;
+    boolean isSignature;
+}
+
+// [10]
+class UserProfile {
+    String name;
+    int age;
+    String mbti;
+}
+
+ 
+
 
 /*[문제 10] UserProfile 클래스를 만드세요. name(문자열), age(정수), mbti(문자열) 멤버 변수를 가집니다.
 1. main 함수에서 UserProfile 객체를 하나 생성하세요.
